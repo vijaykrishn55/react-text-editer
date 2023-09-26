@@ -22,7 +22,7 @@ export default function TextForm(props) {
 
   return (
     <>
-      <h1 style={{ color: props.mode === "dark" ? "white" : "black" }}>{props.heading}</h1>
+      <h1 style={{ color: props.mode === "dark" ? "white" : "black",marginTop:"60px"}}>{props.heading}</h1>
       <p style={{ color: props.mode === "dark" ? "white" : "black" }}>
         {text.split(" ").length} words and {text.length} Characters
       </p>

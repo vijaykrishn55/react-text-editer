@@ -10,11 +10,14 @@ const showAlert=(messege, type)=>{
     msg:messege,
     type:type
   })
+  setTimeout(()=>{
+    setAlert(null)
+  },2000)
 }
   const [mode , setMode]=useState("light");
   const toggleMode = () => {
     const newMode = mode === "dark" ? "light" : "dark";
-    showAlert(`${newMode==='dark'?'Dark':'Light'} mode has been enable`,"success")
+    showAlert(`${newMode==='dark'?'Dark':'Light'} mode has been enabled`,"success")
     // console.log(mode);
     // console.log(newMode);
     setMode(newMode);
@@ -27,7 +30,7 @@ const showAlert=(messege, type)=>{
       <NavBar title="Text Utile" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
         <div className="container my-3">
-        <TextForm heading="Hello" mode={mode} />
+        <TextForm heading="Text Utile" mode={mode} />
         </div>
     </>
   );
